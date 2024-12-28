@@ -1,0 +1,32 @@
+import { DesignTiled } from "../../../../core/design";
+import { DungeonPMDO } from "../../../../types/enum/Dungeon";
+import { Orientation } from "../../../../types/enum/Game";
+import { Pkm } from "../../../../types/enum/Pokemon";
+import { Status } from "../../../../types/enum/Status";
+import AnimationManager from "../animation-manager";
+import LoadingManager from "../components/loading-manager";
+import PokemonSprite from "../components/pokemon";
+export declare class DebugScene extends Phaser.Scene {
+    height: number;
+    width: number;
+    animationManager: AnimationManager | null;
+    loadingManager: LoadingManager | null;
+    onProgress: (value: number) => void;
+    onComplete: () => void;
+    pokemon?: PokemonSprite;
+    target?: PokemonSprite;
+    uid: string;
+    tilemap: DesignTiled | undefined;
+    map: Phaser.Tilemaps.Tilemap | undefined;
+    music: Phaser.Sound.WebAudioSound | null;
+    attackAnimInterval: ReturnType<typeof setInterval> | undefined;
+    constructor(height: number, width: number, onProgress: (value: number) => void, onComplete: () => void);
+    preload(): void;
+    create(): void;
+    updateSprite(pkm: Pkm, orientation: Orientation, animationType: string, status: Status | "", shiny: boolean): void;
+    updateMap(mapName: DungeonPMDO): Promise<void>;
+    applyStatusAnimation(status: Status | ""): void;
+    showTarget(): void;
+    addAttackAnim(): void;
+    addAbilityAnim(): void;
+}

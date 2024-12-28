@@ -1,0 +1,33 @@
+import { MapSchema } from "@colyseus/schema";
+import { Body, Engine } from "matter-js";
+import { FloatingItem } from "../../models/colyseus-models/floating-item";
+import Player from "../../models/colyseus-models/player";
+import { PokemonAvatarModel } from "../../models/colyseus-models/pokemon-avatar";
+import { Portal, SynergySymbol } from "../../models/colyseus-models/portal";
+import GameRoom from "../../rooms/game-room";
+import GameState from "../../rooms/states/game-state";
+import { Item } from "../../types/enum/Item";
+import { SpecialGameRule } from "../../types/enum/SpecialGameRule";
+export declare class MiniGame {
+    avatars: MapSchema<PokemonAvatarModel> | undefined;
+    items: MapSchema<FloatingItem> | undefined;
+    portals: MapSchema<Portal> | undefined;
+    symbols: MapSchema<SynergySymbol> | undefined;
+    symbolsByPortal: Map<string, SynergySymbol[]>;
+    bodies: Map<string, Body>;
+    alivePlayers: Player[];
+    engine: Engine;
+    centerX: number;
+    centerY: number;
+    constructor(room: GameRoom);
+    create(avatars: MapSchema<PokemonAvatarModel>, items: MapSchema<FloatingItem>, portals: MapSchema<Portal>, symbols: MapSchema<SynergySymbol>): void;
+    initialize(state: GameState, room: GameRoom): void;
+    initializeItemsCarousel(stageLevel: number, specialGameRule: SpecialGameRule | null): void;
+    initializePortalCarousel(): void;
+    update(dt: number): void;
+    pickRandomItems(stageLevel: number, specialGameRule: SpecialGameRule | null): Item[];
+    pickRandomSynergySymbols(): void;
+    applyVector(id: string, x: number, y: number): void;
+    updatePlayerVector(id: string): void;
+    stop(room: GameRoom): void;
+}
