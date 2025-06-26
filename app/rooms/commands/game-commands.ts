@@ -1347,7 +1347,9 @@ export class OnUpdatePhaseCommand extends Command<GameRoom> {
     this.state.phase = GamePhaseState.PICK
     this.state.time =
       (StageDuration[this.state.stageLevel] ?? StageDuration.DEFAULT) * 1000
-
+    if(this.state.specialGameRule === SpecialGameRule.BLITZ) {
+      this.state.time = (StageDuration[this.state.stageLevel] ?? StageDuration.DEFAULT) * 100
+    }
     // Milcery flavors check
     this.state.players.forEach((player: Player) => {
       if (player.alive) {
