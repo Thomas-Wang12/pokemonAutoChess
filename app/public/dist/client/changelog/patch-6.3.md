@@ -75,6 +75,14 @@
 - Nerf Unown F (Fish): 3 → 2 fishes
 - Nerf Misty Surge (Tapu Fini): HP and PP gain 30 → 25
 - Nerf Plusle & Minun: Speed 65 → 61 ; nerf Link Cable: now if Plusle and Minun are alone, only deal half the damage to adjacent enemies
+- Nerf Scale Shot (Roaring moon): Damage to enemies in the path: 20 → 10 physical damage ; damage to farthest target remains unchanged
+- Buff Psycho-Cut (Gallade): 10/20/30 → 10/20/40 special damage
+- Buff Psycho Boost (Deoxys normal form): 140 → 150 special damage
+- Buff Mewtwo: PP 120 → 110
+- Buff Mew: Speed 57 → 64
+- Buff Smoochum line: Special defense :2/6 → 3/8
+- Buff Doom Desire (Jirachi): restore ~~60~~ to max PP if target is KO in the duration
+- Nerf Capsakid line: PP 100 → 110
 
 # Changes to Synergies
 
@@ -87,10 +95,10 @@
 
 - New artificial item: Berserk Gene: Gives Monster synergy. The holder gets Confused for the whole fight if gaining Monster stacks.
 - New artificial item: Surfing Board: Gives Aquatic synergy. The holder casts Surf at every tidal wave, with the ability level matching current Aquatic synergy level.
-- Punching Glove now deals additional physical damage equal to ~~8~~ 10% of the target's max HP, applied after all other computations (crit/fairy spcial damage/steel true damage etc.). It is a separate instance of damage, meaning it will be reduced by Fighting resistance, will give 2 stacks to Muscle Band, and won't benefit from other damage boosts like Fairy special damage bonus.
-- Nerf Scope Lens: PP stolen 15 → 10
+- Punching Glove now deals additional physical damage **after all other computations** (crit/fairy spcial damage/steel true damage etc.). It is a separate instance of damage, meaning it will be reduced by Fighting resistance, will give 2 stacks to Muscle Band, and won't benefit from other damage boosts like Fairy special damage bonus.
 - Nerf Scope Lens: PP stolen 15 → 10 ; now cannot steal more PP than the target has
 - Power lens now also reflects special damage added to basic attacks (from Fairy, Charge, Teleport, etc.)
+- Nerf Curry: 5 → 4 seconds rage duration
 - Buff Moomoo Milk: 10 → 15 permanent HP
 - Buff Star Sweet: 5 → 10 permanent AP
 - Buff Berry Sweet: 10 → 15 permanent HP
@@ -107,6 +115,8 @@
 - Change Gold Bottle Cap: now always give +50% crit chance, no longer gives +1% crit chance per gold you have
 - Nerf Magmarizer: Attack 5 → 3
 - Nerf Big Nugget: Gold gained at max stacks 3 → 2
+- Change Ghimmigoul coin: no longer gives 1 additional gold per round ; Duskull encounter gives it for free along with regular items in carousel
+- New item: Treasure box ; Xatu town encounter now sells a treasure box for 10 gold. It contains two random item components.
 
 # Gameplay
 
@@ -123,6 +133,7 @@
 - Simplified the collection system UI. Added counters for portraits unlocked, shinies unlocked, and pokémons played.
 - Add pool filter in pokemon meta report
 - Add pokemon search bar in Wiki Regions
+- Added camera shakes to some abilities. Can be disabled in options.
 
 # Collection system rework
 
