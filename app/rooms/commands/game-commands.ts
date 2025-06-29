@@ -363,6 +363,10 @@ export class OnDragDropPokemonCommand extends Command<
             this.swapPokemonPositions(player, pokemon, x, y)
             success = true
           }
+
+          if(teamSize >= 10 && !isBoardFull){
+            player.titles.add(Title.DECURION)
+          }
         }
       }
 
@@ -1999,12 +2003,12 @@ export class OnUpdatePhaseCommand extends Command<GameRoom> {
           nbEggsFound++
         }
         if (player.effects.has(EffectEnum.GOLDEN_EGGS) && !goldenEggFound) {
-          player.goldenEggChance += GOLDEN_EGG_CHANCE * (1 + baby.luck / 100)
+          player.goldenEggChance += max(0.1)(Math.pow(GOLDEN_EGG_CHANCE, 1 - baby.luck / 200))
         } else if (
           player.effects.has(EffectEnum.HATCHER) &&
           nbEggsFound === 0
         ) {
-          player.eggChance += EGG_CHANCE * (1 + baby.luck / 100)
+          player.eggChance += max(0.2)(Math.pow(EGG_CHANCE, 1 - baby.luck / 100))
         }
       }
 
