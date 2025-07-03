@@ -11539,7 +11539,7 @@ export class Rowlet extends Pokemon {
   types = new SetSchema<Synergy>([Synergy.GRASS, Synergy.FLYING, Synergy.GHOST])
   rarity = Rarity.HATCH
   stars = 1
-  evolution = Pkm.DARTIX
+  evolution = Pkm.DARTRIX
   evolutionRule = new HatchEvolutionRule()
   hp = 70
   atk = 5
@@ -11553,7 +11553,7 @@ export class Rowlet extends Pokemon {
   attackSprite = AttackSprite.GRASS_MELEE
 }
 
-export class Dartix extends Pokemon {
+export class Dartrix extends Pokemon {
   types = new SetSchema<Synergy>([Synergy.GRASS, Synergy.FLYING, Synergy.GHOST])
   rarity = Rarity.HATCH
   stars = 2
@@ -19503,7 +19503,7 @@ export const PokemonClasses: Record<
   [Pkm.DUGTRIO]: Dugtrio,
   [Pkm.ALOLAN_DUGTRIO]: AlolanDugtrio,
   [Pkm.ROWLET]: Rowlet,
-  [Pkm.DARTIX]: Dartix,
+  [Pkm.DARTRIX]: Dartrix,
   [Pkm.DECIDUEYE]: Decidueye,
   [Pkm.ZORUA]: Zorua,
   [Pkm.ZOROARK]: Zoroark,

@@ -175,7 +175,7 @@ export enum Pkm {
   DARKRAI = "DARKRAI",
   DARMANITAN = "DARMANITAN",
   DARMANITAN_ZEN = "DARMANITAN_ZEN",
-  DARTIX = "DARTIX",
+  DARTRIX = "DARTRIX",
   DARUMAKA = "DARUMAKA",
   DECIDUEYE = "DECIDUEYE",
   DEERLING = "DEERLING",
@@ -1831,7 +1831,7 @@ export const PkmIndex: { [key in Pkm]: string } = {
   [Pkm.HOOPA_UNBOUND]: "0720-0001",
   [Pkm.VOLCANION]: "0721",
   [Pkm.ROWLET]: "0722",
-  [Pkm.DARTIX]: "0723",
+  [Pkm.DARTRIX]: "0723",
   [Pkm.DECIDUEYE]: "0724",
   [Pkm.LITTEN]: "0725",
   [Pkm.TORRACAT]: "0726",
@@ -2693,7 +2693,7 @@ export const PkmFamily: { [key in Pkm]: Pkm } = {
   [Pkm.DUGTRIO]: Pkm.DIGLETT,
   [Pkm.ALOLAN_DUGTRIO]: Pkm.ALOLAN_DIGLETT,
   [Pkm.ROWLET]: Pkm.ROWLET,
-  [Pkm.DARTIX]: Pkm.ROWLET,
+  [Pkm.DARTRIX]: Pkm.ROWLET,
   [Pkm.DECIDUEYE]: Pkm.ROWLET,
   [Pkm.ZORUA]: Pkm.ZORUA,
   [Pkm.ZOROARK]: Pkm.ZORUA,
@@ -5952,7 +5952,7 @@ export const AnimationConfig: {
     ability: AnimationType.Shoot,
     emote: AnimationType.Shoot
   },
-  [Pkm.DARTIX]: {
+  [Pkm.DARTRIX]: {
     attack: AnimationType.Attack,
     ability: AnimationType.Shoot,
     emote: AnimationType.Shoot
